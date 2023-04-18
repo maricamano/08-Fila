@@ -92,14 +92,11 @@ void insere()
 	cin >> novo->valor;
 	novo->prox = NULL;
 
-	if (inicio == NULL || fim == NULL)
-	{
+	if (inicio == NULL || fim == NULL) {
 		inicio = novo;
 		fim = novo;
 	}
-
-	else
-	{
+	else {
 		fim->prox = novo;
 		fim = novo;
 	}
@@ -125,14 +122,14 @@ void exibirElementos()
 void remove()
 {
 	NO* delet = inicio;
-	
+
 	if (inicio->prox == NULL)
 	{
 		inicio = NULL;
 		fim = NULL;
 		free(delet);
 	}
-	else 
+	else
 	{
 		cout << "Remova um elemento";
 		inicio = inicio->prox;
